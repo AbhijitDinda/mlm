@@ -4,8 +4,9 @@
   "description": "",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
-    "build": "npx tsc",
-    "start": "node dist/app.js"
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "watch": "tsc -w"
   },
   "keywords": [],
   "author": "",
