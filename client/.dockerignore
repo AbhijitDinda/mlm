@@ -1,0 +1,7 @@
+dist
+node_modules
+.gitignore
+log*
+Dockerfile
+compose.yaml
+.env

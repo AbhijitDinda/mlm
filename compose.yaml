@@ -1,0 +1,34 @@
+services:
+  server:
+    image: adityaa72/ebook-mern-server
+    platform: linux/amd64
+    ports:
+      - 8083:3000
+    volumes:
+      - cdn_private_files:/app/private
+      - cdn_public_files:/app/files
+    # env_file:
+    #   - .env
+    environment:
+      - NODE_ENV=production
+      - CLIENT_URL=https://binary-mlm.jamsrworld.com
+      - API_URL=https://binary-mlm-api.jamsrworld.com
+      - MONGODB_URI=mongodb+srv://jamsr:jamsr@cluster0.kvac3tq.mongodb.net/pinmlm?retryWrites=true&w=majority
+      - JWT_SECRET_KEY=9f97e4e673ab0b6b12b21534df5ba7a3f75022e3beeb1eff8dcd64bfacd5809696e62d65bc05a99e3bc6849c9283b80a1222ff3274a071f3a8b8913148afdf02
+      - PORT=3000
+
+  client:
+    image: adityaa72/ebook-mern-client
+    platform: linux/amd64
+    ports:
+      - 5173:3000
+
+  admin:
+    image: adityaa72/ebook-mern-admin
+    platform: linux/amd64
+    ports:
+      - 5174:3000
+
+volumes:
+  cdn_private_files:
+  cdn_public_files:

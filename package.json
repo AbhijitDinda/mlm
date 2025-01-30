@@ -1,0 +1,21 @@
+{
+  "name": "ebook-mlm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd client && npm run dev\"  \"cd admin && npm run dev\"  \"cd server && npm run dev\" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityaa72/ebook-mlm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adityaa72/ebook-mlm/issues"
+  },
+  "homepage": "https://github.com/adityaa72/ebook-mlm#readme"
+}

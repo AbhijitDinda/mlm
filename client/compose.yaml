@@ -1,0 +1,9 @@
+services:
+  client:
+    image: adityaa72/ebook-mern-client
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5173:3000
